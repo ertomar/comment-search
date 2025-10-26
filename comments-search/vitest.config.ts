@@ -1,5 +1,5 @@
 /// <reference types="vitest" />
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
@@ -15,6 +15,7 @@ export default defineConfig({
       "@/queries": path.resolve(__dirname, "./src/queries"),
       "@/types": path.resolve(__dirname, "./src/types"),
       "@/utils": path.resolve(__dirname, "./src/utils"),
+      "@/test": path.resolve(__dirname, "./src/test"),
     },
   },
   test: {

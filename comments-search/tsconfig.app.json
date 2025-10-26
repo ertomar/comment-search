@@ -25,7 +25,8 @@
       "@/services/*": ["./src/services/*"],
       "@/queries/*": ["./src/queries/*"],
       "@/types/*": ["./src/types/*"],
-      "@/utils/*": ["./src/utils/*"]
+      "@/utils/*": ["./src/utils/*"],
+      "@/test/*": ["./src/test/*"]
     },
 
     /* Linting */
@@ -36,5 +37,6 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx"]
 }

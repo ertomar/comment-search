@@ -15,24 +15,7 @@ export default defineConfig({
       "@/queries": path.resolve(__dirname, "./src/queries"),
       "@/types": path.resolve(__dirname, "./src/types"),
       "@/utils": path.resolve(__dirname, "./src/utils"),
-    },
-  },
-  test: {
-    globals: true,
-    environment: "jsdom",
-    setupFiles: "./src/test/setup.ts",
-    css: true,
-    coverage: {
-      provider: "v8",
-      reporter: ["text", "json", "html"],
-      exclude: [
-        "node_modules/",
-        "src/test/",
-        "**/*.d.ts",
-        "**/*.config.*",
-        "**/mockData",
-        "**/*.test.{ts,tsx}",
-      ],
+      "@/test": path.resolve(__dirname, "./src/test"),
     },
   },
 });
