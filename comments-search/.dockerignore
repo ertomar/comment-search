@@ -29,6 +29,13 @@ Thumbs.db
 
 # Testing
 coverage
+*.test.ts
+*.test.tsx
+src/test/
+vitest.config.ts
+TESTING.md
+SETUP_TESTING.md
+install-test-deps.sh
 
 # Docker
 Dockerfile
