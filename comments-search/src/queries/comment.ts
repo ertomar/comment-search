@@ -1,10 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 
-import { getComments } from "../services";
+import { getComments, type GetCommentsParams } from "@/services";
 
-export const useComments = () => {
+export const useComments = (params: GetCommentsParams = {}) => {
   return useQuery({
-    queryKey: ["comments"],
-    queryFn: getComments,
+    queryKey: ["comments", params],
+    queryFn: () => getComments(params),
+    enabled: !!params.query,
   });
 };

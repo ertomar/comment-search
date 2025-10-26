@@ -1,3 +1,5 @@
+import { CommentsList } from "./pages";
+
 export default function App() {
-  return <div>App</div>;
+  return <CommentsList />;
 }
