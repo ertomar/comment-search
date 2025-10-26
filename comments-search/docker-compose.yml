@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  comment_search:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: comment_search:latest
+    container_name: comment_search_app
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    # Add environment variables if needed
+    # environment:
+    #   - NODE_ENV=production
+# Usage:
+# docker-compose up -d        # Build and start in background
+# docker-compose down         # Stop and remove container
+# docker-compose logs -f      # View logs
+# docker-compose restart      # Restart container
+
